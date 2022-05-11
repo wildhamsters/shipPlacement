@@ -1,0 +1,2 @@
+# Microservce responsible for placing ships on the board
+
