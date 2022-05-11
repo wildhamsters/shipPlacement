@@ -40,10 +40,10 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-    <dependency>
+    <!-- <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-websocket</artifactId>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -72,45 +72,45 @@
       <scope>test</scope>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-web</artifactId>
       <version>${spring.security.web.version}</version>
-    </dependency>
+    </dependency> -->
 
-    <dependency>
+    <!-- <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-config</artifactId>
       <version>${spring.security.config.version}</version>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-tomcat</artifactId>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>webjars-locator-core</artifactId>
-    </dependency>
+    </dependency> -->
 
-    <dependency>
+    <!-- <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>sockjs-client</artifactId>
       <version>${sockjs.client.version}</version>
-    </dependency>
+    </dependency> -->
 
-    <dependency>
+    <!-- <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>stomp-websocket</artifactId>
       <version>${stomp.websocket.version}</version>
-    </dependency>
+    </dependency> -->
 
-    <dependency>
+    <!-- <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>bootstrap</artifactId>
       <version>${bootstrap.version}</version>
-    </dependency>
+    </dependency> -->
   </dependencies>
 
   <build>
@@ -164,7 +164,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
-      <plugin>
+      <!-- <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
         <version>${maven.dependency.plugin.version}</version>
@@ -177,7 +177,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
+      </plugin> -->
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>

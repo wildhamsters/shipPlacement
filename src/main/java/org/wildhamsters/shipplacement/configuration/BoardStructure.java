@@ -48,7 +48,7 @@ class BoardStructure {
     }
 
     int size() {
-        return width*height;
+        return width * height;
     }
 
     int width() {
