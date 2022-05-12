@@ -8,6 +8,6 @@ class ShipPlacementTest {
 
 	@Test
 	void contextLoads() {
+		// empty test that would fail if our Spring configuration does not load correctly
 	}
-
 }

@@ -73,11 +73,7 @@ public class ShipPlacementConfigurer {
     }
 
     private ShipDirection establishShipDirection() {
-        return switch (random.nextInt(ShipDirection.values().length)) {
-            case 0 -> ShipDirection.HORIZONTAL;
-            case 1 -> ShipDirection.VERTICAL;
-            default -> ShipDirection.VERTICAL;
-        };
+        return (random.nextInt(ShipDirection.values().length) == 0) ? ShipDirection.HORIZONTAL : ShipDirection.VERTICAL;
     }
 
     public List<Integer> generateDefaultList() {
