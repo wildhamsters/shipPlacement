@@ -17,7 +17,7 @@ public class ShipsPositions {
 
     List<ShipPosition> getPositionsOfShipsOfSize(int shipSize) {
         return shipsPosition.stream()
-                .filter(l -> l.shipSize() == shipSize)
+                .filter(l -> l.positions().size() == shipSize)
                 .toList();
     }
 
