@@ -15,12 +15,6 @@ public class ShipsPositions {
         this.shipsPosition = shipsPosition;
     }
 
-    List<ShipPosition> getPositionsOfShipsOfSize(int shipSize) {
-        return shipsPosition.stream()
-                .filter(l -> l.positions().size() == shipSize)
-                .toList();
-    }
-
     public List<ShipPosition> getAllShipsPositions() {
         return shipsPosition;
     }
@@ -32,14 +26,11 @@ public class ShipsPositions {
     }
 
     @Override
-    public String toString() {
-        return shipsPosition.toString();
-    }
-
-    @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         ShipsPositions that = (ShipsPositions) o;
         var occupiedFields = allOccupiedFields();
         var thatOccupiedFields = that.allOccupiedFields();
@@ -49,7 +40,7 @@ public class ShipsPositions {
     @Override
     public int hashCode() {
         return Objects.hash(IntStream
-                .range(0, getAllShipsPositions().size()-1)
+                .range(0, getAllShipsPositions().size() - 1)
                 .map(Objects::hash)
                 .sum());
     }
