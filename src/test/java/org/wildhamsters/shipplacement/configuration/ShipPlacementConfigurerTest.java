@@ -9,6 +9,8 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.stream.IntStream;
 
+import static org.testng.Assert.*;
+
 @Test
 public class ShipPlacementConfigurerTest {
 
@@ -26,7 +28,7 @@ public class ShipPlacementConfigurerTest {
                 .distinct()
                 .count();
         //then
-        Assert.assertNotEquals(distinctPlacements, DISTINCT_PLACEMENT_TRESHOLD);
+        assertTrue(distinctPlacements == DISTINCT_PLACEMENT_TRESHOLD);
     }
 
     @DataProvider

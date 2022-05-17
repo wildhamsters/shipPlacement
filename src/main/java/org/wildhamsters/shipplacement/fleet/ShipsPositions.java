@@ -25,7 +25,7 @@ public class ShipsPositions {
         return shipsPosition;
     }
 
-    public List<Integer> getAllOccupiedFields() {
+    public List<Integer> allOccupiedFields() {
         return shipsPosition.stream()
                 .flatMap(p -> p.positions().stream())
                 .toList();
@@ -41,8 +41,8 @@ public class ShipsPositions {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ShipsPositions that = (ShipsPositions) o;
-        var occupiedFields = getAllOccupiedFields();
-        var thatOccupiedFields = that.getAllOccupiedFields();
+        var occupiedFields = allOccupiedFields();
+        var thatOccupiedFields = that.allOccupiedFields();
         return occupiedFields.equals(thatOccupiedFields);
     }
 
