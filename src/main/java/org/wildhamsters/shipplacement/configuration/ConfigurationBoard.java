@@ -1,3 +1,4 @@
+
 package org.wildhamsters.shipplacement.configuration;
 
 import java.util.Collection;
@@ -85,31 +86,7 @@ class ConfigurationBoard {
         return newBoard;
     }
 
-    @Override
-    public String toString() {
-        var sb = new StringBuilder();
-        IntStream.range(1, structure.size() + 1)
-                .forEach(i -> {
-                    sb.append(board.get(i - 1).toString()).append(" ");
-                    if (i % structure.width() == 0) {
-                        sb.append(System.lineSeparator());
-                    }
-                });
-        return sb.toString();
-    }
-
     private enum FieldState {
-        WATER("."), WALL("*"), SHIP("#");
-
-        private final String representation;
-
-        FieldState(String representation) {
-            this.representation = representation;
-        }
-
-        @Override
-        public String toString() {
-            return representation;
-        }
+        WATER, WALL, SHIP;
     }
 }
