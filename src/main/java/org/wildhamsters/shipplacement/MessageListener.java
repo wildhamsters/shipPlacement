@@ -18,11 +18,11 @@ class MessageListener {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    @RabbitListener(queues = RabbitMQConfig.QUEUE)
+    @RabbitListener(queues = RabbitMQConfig.REQUEST_QUEUE)
     void listener(String message) {
         System.out.println(message);
         ShipPlacementConfigurer spc = new ShipPlacementConfigurer(10, 10, random);
-        rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE, RabbitMQConfig.POSITIONS_KEY,
+        rabbitTemplate.convertAndSend(RabbitMQConfig.MESSAGE_EXCHANGE, RabbitMQConfig.POSITIONS_KEY,
                 new PositionsDTO(spc.placeShips(spc.generateDefaultList()).getAllShipsPositions()));
     }
 }

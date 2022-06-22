@@ -15,9 +15,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQConfig {
 
-    static final String EXCHANGE = "message_exchange";
+    static final String MESSAGE_EXCHANGE = "message_exchange";
 
-    static final String QUEUE = "requestShips_queue";
+    static final String REQUEST_QUEUE = "requestShips_queue";
     static final String ROUTING_KEY = "requestShips_key";
 
     static final String RESPONSE_QUEUE = "shipPositions_queue";
@@ -26,12 +26,12 @@ public class RabbitMQConfig {
     @Bean
     @Qualifier("requestShips_key")
     Queue queue() {
-        return new Queue(QUEUE);
+        return new Queue(REQUEST_QUEUE);
     }
 
     @Bean
     TopicExchange exchange() {
-        return new TopicExchange(EXCHANGE);
+        return new TopicExchange(MESSAGE_EXCHANGE);
     }
 
     @Bean
